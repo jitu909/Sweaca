@@ -7,19 +7,28 @@ import {APP_BASE_HREF} from '@angular/common';
 // import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { loginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { loginComponent } from './user/login/login.component';
+import { RegisterComponent } from './user/register/register.component';
+import { UserComponent } from './user/user.component';
+import { HomeComponent } from './home/home.component';
+//import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     loginComponent,
-    RegisterComponent
+    RegisterComponent,
+    UserComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
+    {
+      path: '',
+      component: UserComponent 
+    },
     {
     	path : 'login',
     	component : loginComponent
@@ -27,11 +36,15 @@ import { RegisterComponent } from './register/register.component';
     {
       path : 'register',
       component : RegisterComponent
+    },
+    {
+      path : 'home',
+      component : HomeComponent
     }
     ]),
     HttpModule
   ],
-  providers: [{provide: APP_BASE_HREF, useValue : '/' }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
