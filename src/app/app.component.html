@@ -1,9 +1,10 @@
 <h2>Sweaca Nursery</h2>
-<p>
-<a [routerLink]="['/login']" class="btn btn-link">Login</a>
-<a [routerLink]="['/register']" class="btn btn-link">Register</a>
-</p>
-<router-outlet></router-outlet>
+
+<!-- 	<p>
+<a [routerLink]="['login']" class="btn btn-link">Login</a>
+<a [routerLink]="['register']" class="btn btn-link">Register</a>
+</p> -->
+<router-outlet></router-outlet> 
 <!-- Commented Part -->
 <!-- ng-app="myApp" ng-controller="validateCtrl" 
 name="myForm" novalidate
@@ -17,5 +18,10 @@ name="myForm" novalidate
 <span style="color:red" ng-show="myForm.password.$dirty && myForm.password.$invalid">
 <span ng-show="myForm.password.$error.required">Password is required.</span>
 </span>
-
-  -->
+ <li class="tab">
+	<a routerLink='/login' routerLinkActive='active'>Login</a>
+</li>
+<li class="tab">
+	<a  routerLink='/register' routerLinkActive='active'>Register</a>
+</li>
+<div class="row"> -->
